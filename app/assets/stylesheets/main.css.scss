@@ -1,0 +1,48 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+h4 {
+  color: #C9341C;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.navbar-default {
+  background-image: linear-gradient(to bottom,#50AB5D 0,#499955 100%);
+  border-color: #E7E7E7;
+}
+
+.navbar-brand {
+  color: white !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+}
+
+.monthly-income,
+.debt-payments {
+  vertical-align: bottom !important;
+}
+
+.inputs-group, .totals, .output {
+  padding: 15px;
+}
+
+.form-group label {
+  width: 200px;
+}
+
+.output {
+  margin-top: 50px;
+}
+
+.loan-amount {
+  font-weight: bold;
+  font-size: 36px;
+  color: green;
+}

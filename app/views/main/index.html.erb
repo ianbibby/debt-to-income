@@ -1,0 +1,141 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="navbar-header">
+    <a href="#" class="navbar-brand">Debt-To-Income Calculator</a>
+  </div>
+</nav>
+<div class="container">
+  <form class="form-inline" role="form">
+    <div class="inputs-group">
+      <h4>Monthly Income</h4>
+      <div class="monthly-income form-group">
+        <p>
+          <label for="input-wages">Wages</label>
+          <input type="number" class="form-control" id="input-wages" placeHolder="0.00" min="0">
+        </p>
+        <p>
+          <label for="input-bonuses-overtime">Bonuses / Overtime</label>
+          <input type="number" class="form-control" id="input-bonuses-overtime" placeHolder="0.00" min="0">
+        </p>
+        <p>
+          <label for="input-child-support-alimony">Child Support / Alimony</label>
+          <input type="number" class="form-control" id="input-child-support-alimony" placeHolder="0.00">
+        </p>
+        <p>
+          <label for="input-other-income">Other Income</label>
+          <input type="number" class="form-control" id="input-other-income" placeHolder="0.00">
+        </p>
+      </div>
+    </div>
+    <div class="inputs-group">
+      <h4>Monthly Payments</h4>
+      <div class="debt-payments form-group">
+        <p>
+          <label for="input-credit-cards">Credit Cards</label>
+          <input type="number" class="form-control" id="input-credit-cards" placeHolder="0.00">
+        </p>
+        <p>
+          <label for="input-student-loans">Student Loans</label>
+          <input type="number" class="form-control" id="input-student-loans" placeHolder="0.00">
+        </p>
+        <p>
+          <label for="input-auto-loan">Auto Loan</label>
+          <input type="number" class="form-control" id="input-auto-loan" placeHolder="0.00">
+        </p>
+        <p>
+          <label for="input-mortgage-rent">Mortgage / Rent</label>
+          <input type="number" class="form-control" id="input-mortgage-rent" placeHolder="0.00">
+        </p>
+        <p>
+          <label for="input-child-support-alimony-debt">Child Support / Alimony</label>
+          <input type="number" class="form-control" id="input-child-support-alimony-debt" placeHolder="0.00">
+        </p>
+        <p>
+          <label for="input-other-payments">Other Payments</label>
+          <input type="number" class="form-control" id="input-other-payments" placeHolder="0.00">
+        </p>
+      </div>
+    </div>
+    <div class="inputs-group">
+      <h4>Credit Score</h4>
+      <div class="credit-score form-group">
+        <p>
+          <label for="input-credit-score">Credit Score</label>
+          <input type="number" class="form-control" id="input-credit-score" placeHolder="0-700+">
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="totals form-group">
+      <h4>Debt-To-Income</h4>
+      <!--
+      <p>
+        <label for="monthly-income">Total Monthly Income</label>
+        <input type="text" id="monthly-income" class="form-control" disabled>
+      </p>
+      <p>
+        <label for="debt-payments">Total Debt Payments</label>
+        <input type="text" id="debt-payments" class="form-control" disabled>
+      </p>
+      -->
+      <p>
+        <label for="dti-ratio">DTI Ratio</label>
+        <input type="text" id="dti-ratio" class="form-control" disabled>
+      </p>
+      <p>
+        <label for="max-payment">Max Payment Percentage</label>
+        <input type="text" id="max-payment" class="form-control" disabled>
+      </p>
+      <hr/>
+      <p>
+        <label for="qualifying-amount">Qualifying Amount</label>
+        <input type="text" id="qualifying-amount" class="form-control" disabled>
+      </p>
+    </div>
+  </form>
+
+  <div class="well output">
+    <p>
+      Maximum Amount Borrowed: <span class="loan-amount">0.00</span>
+    </p>
+    <h4>
+      Payment Schedule
+    </h4>
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <th>1 Payment</th>
+          <td><span class="payment-1">0.00</span></td>
+        </tr>
+        <tr>
+          <th>2 Payments</th>
+          <td><span class="payment-2">0.00</span></td>
+        </tr>
+        <tr>
+          <th>3 Payments</th>
+          <td><span class="payment-3">0.00</span></td>
+        </tr>
+        <tr>
+          <th>4 Payments</th>
+          <td><span class="payment-4">0.00</span></td>
+        </tr>
+        <tr>
+          <th>5 Payments</th>
+          <td><span class="payment-5">0.00</span></td>
+        </tr>
+        <tr>
+          <th>6 Payments</th>
+          <td><span class="payment-6">0.00</span></td>
+        </tr>
+        <tr>
+          <th>7 Payments</th>
+          <td><span class="payment-7">0.00</span></td>
+        </tr>
+        <tr>
+          <th>8 Payments</th>
+          <td><span class="payment-8">0.00</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
