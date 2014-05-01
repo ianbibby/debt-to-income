@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* line 1, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+body {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+/* line 7, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+h4 {
+  color: #C9341C;
+}
+
+/* line 12, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 17, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+.navbar-default {
+  background-image: linear-gradient(to bottom, #50ab5d 0, #499955 100%);
+  border-color: #E7E7E7;
+}
+
+/* line 22, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+.navbar-brand {
+  color: white !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 28, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+.monthly-income,
+.debt-payments {
+  vertical-align: bottom !important;
+}
+
+/* line 32, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+.inputs-group, .totals, .output {
+  padding: 15px;
+}
+
+/* line 36, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+.form-group label {
+  width: 200px;
+}
+
+/* line 40, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+.output {
+  margin-top: 50px;
+}
+
+/* line 44, /Users/ian/code/DebtToIncome/app/assets/stylesheets/main.css.scss */
+.loan-amount {
+  font-weight: bold;
+  font-size: 36px;
+  color: green;
+}
