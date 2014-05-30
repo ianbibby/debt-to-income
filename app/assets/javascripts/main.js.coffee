@@ -37,7 +37,7 @@ class DTICalculator
       0
 
   maxPayment: (ratio) =>
-    n = @maxDti() - (ratio/100)
+    n = (@maxDti() - (ratio/100)).toFixed(2)
     return 0 if isNaN(n)
     parseInt(n*100)
 
