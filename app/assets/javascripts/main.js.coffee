@@ -5,7 +5,7 @@ class DTICalculator
     $(".monthly-income input, .debt-payments input, .credit-score input").focusout =>
       @calculate()
 
-  sumFormGroup: (group_name) ->
+  sumFormGroup: (group_name) =>
     inputs = $(".#{group_name} input")
     values = (parseFloat(el.value) for el in inputs)
     values.reduce (acc, e)->
@@ -13,17 +13,35 @@ class DTICalculator
       acc + e
     ,0
 
-  ratio: (debt, monthly) ->
+  ratio: (debt, monthly) =>
     n = debt / monthly
     return 0 if isNaN(n)
     parseInt(n*100)
 
-  maxPayment: (ratio) ->
-    n = 0.55 - (ratio/100)
+  creditScore: =>
+    parseInt($("#input-credit-score").val())
+
+  maxDti: =>
+    cs = @creditScore()
+    if cs > 720
+      1
+    else if 640 <= cs <= 720
+      0.55
+    else if 590 <= cs <= 639
+      0.45
+    else if 530 <= cs <= 589
+      0.40
+    else if cs < 530
+      0.35
+    else
+      0
+
+  maxPayment: (ratio) =>
+    n = @maxDti() - (ratio/100)
     return 0 if isNaN(n)
     parseInt(n*100)
 
-  qualifying: (maxPaymentPercentage, totalMonthlyIncome) ->
+  qualifying: (maxPaymentPercentage, totalMonthlyIncome) =>
     n = maxPaymentPercentage * (totalMonthlyIncome / 100)
     return 0 if isNaN(n)
     n.toFixed(2)
@@ -70,7 +88,7 @@ class DTICalculator
     candidate
 
   creditScoreDeductions: (amount)=>
-    score = parseInt($("#input-credit-score").val())
+    score = @creditScore()
     return 0 if isNaN(score) || score == undefined
     threshold = @creditScoreThreshold(amount)
 
